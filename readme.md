@@ -36,7 +36,11 @@ If you have node and npm installed on your computer, you can simply run `npm ins
 
 `docker run -v "$PWD":/usr/src/app -w /usr/src/app node npm install`
 
-This will create the node_modules folder and allow jest to run its tests.
+This will create the node_modules folder and allow jest to run its tests. You can do so by running
+
+`npm test` or `npm test -- --watch` if you want the test to rerun each time a change is made.
+
+But it might be easier to add a Jest module to your text editor of choice
 
 If you want to run the node app, I've included nodemon and an npm script called "dev". If you have node installed use `npm run dev`, and the alternative with docker is:
 

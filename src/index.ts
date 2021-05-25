@@ -3,6 +3,10 @@ import moment from 'moment-timezone';
 
 require('source-map-support').install();
 
+/**
+ * These interfaces are explained in greater detail in the readme. They correspond to the locale and the relevant data for the challenge.
+ */
+
 export interface Locale {
     openingTimes: OpeningTime[]
     pauseActions: PauseAction[]
@@ -19,11 +23,18 @@ export interface PauseAction {
     datetime: string
 }
 
+/**
+ * This is where you work your magic. See the readme for the instructions
+ */
 
 export function getTimePaused(locale: Locale, start: string, end: string): number {
     let totalPaused = -1;
     return totalPaused;
 }
+
+/**
+ * Use the code below to run the function on the test data. See the readme for how to run this code
+ */
 
 /* const testData = getTestData();
 for (const td of testData) {
