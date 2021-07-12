@@ -11,7 +11,7 @@ Go to `index.ts` and you'll see some interfaces and a function clled `getTimePau
 The locale contains information pertaining to a specific restaurant.
 
 - You have its opening times, which are an Array of 7 elements, with index 0 representing Monday and 6 Sunday. Each of these elements have a start time, and an end time, and the times are in local time.
-- You have a list of pause actions. Each action has an action name, either "pause" or "unpause" and a datetime. Any pause action can only be followed by an unpase action. These actions come in ascending order of datetime. The datetime is in UTC, not local time.
+- You have a list of pause actions. Each action has an action name, either "pause" or "unpause" and a datetime. Any pause action can only be followed by an unpase action, and vice versa. These actions come in ascending order of datetime. The datetime is in UTC, not local time.
 - You have a timezone string, as defined by the tz database (read more here: https://en.wikipedia.org/wiki/Tz_database).
 
 ## `start` and `end` arguments
@@ -32,7 +32,7 @@ This is a small node project, written in typescript and using Jest for testing. 
 
 ## installation
 
-If you have node and npm installed on your computer, you can simply run `npm install` from the projects home directory, or if you have docker use the following:
+If you have node and npm installed on your computer, you can simply run `npm install` from the project's home directory, or if you have docker use the following:
 
 `docker run -v "$PWD":/usr/src/app -w /usr/src/app node npm install`
 
@@ -42,7 +42,11 @@ This will create the node_modules folder and allow jest to run its tests. You ca
 
 But it might be easier to add a Jest module to your text editor of choice
 
-If you want to run the node app, I've included nodemon and an npm script called "dev". If you have node installed use `npm run dev`, and the alternative with docker is:
+If you want to run the node app, first you will need to transpile the typescript into javascript. If you're running node, you can simply run `tsc --watch`, or if using docker:
+
+`docker run -v "$PWD":/usr/src/app -w /usr/src/app node npm run tsc -- --watch`
+
+Now that the code has been compiled, I've included nodemon and an npm script called "dev". If you have node installed use `npm run dev`, and the alternative with docker is:
 
 `docker run -v "$PWD":/usr/src/app -w /usr/src/app node npm run dev`
 

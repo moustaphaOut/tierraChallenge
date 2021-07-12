@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -L dist/index.js",
-    "test": "jest"
+    "test": "jest",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "Michael Beeson <mbeeson@mac.com> (mbeetech.com)",
