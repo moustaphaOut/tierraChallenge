@@ -20,7 +20,7 @@ These two strings are datetime strings using the format "YYYY-MM-DDTHH:mm:ss.SSS
 
 ## The result
 
-The purpose of the function is to take this locale, and ascertain how much time it was paused between the start date and end date. Only time paused during opening hours count, so if a store is set to close at 23:00 local time, then open again at 12:00 the next day, if it is paused at 22:59 then unpaused the next day at 11:59 then it has only been paused for 1 minute.
+The purpose of the function is to take this locale, and ascertain how much time it was paused between the start date and end date. Only time paused during opening hours counts, so if a store is set to close at 23:00 local time, then open again at 12:00 the next day, if it is paused at 22:59 then unpaused the next day at 11:59 then it has only been paused for 1 minute.
 
 To deal with the various date objects and timezones, both `moment` and `moment-timezone` node packages have been included. If you're not familiar with them, feel free to use another package.
 
@@ -38,7 +38,9 @@ If you have node and npm installed on your computer, you can simply run `npm ins
 
 This will create the node_modules folder and allow jest to run its tests. You can do so by running
 
-`npm test` or `npm test -- --watch` if you want the test to rerun each time a change is made.
+`npm test` or `npm test -- --watch` if you want the test to rerun each time a change is made. To run the test via docker use:
+
+`docker run -v "$PWD":/usr/src/app -w /usr/src/app node npm run test`
 
 But it might be easier to add a Jest module to your text editor of choice
 

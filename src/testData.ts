@@ -92,7 +92,7 @@ return [
     [   
         {
             openingTimes: [{
-                start: '120:00',
+                start: '10:00',
                 end: '23:30'
             }, {
                 start: '10:00',
