@@ -152,6 +152,9 @@ return [
                 end: '22:00'
             }],
             pauseActions: [{
+                action: 'unpause',
+                datetime: '2021-03-24T11:24:32.661Z',
+            }, {
                 action: 'pause',
                 datetime: '2021-03-24T13:06:47.312Z',
             }, {
@@ -169,6 +172,9 @@ return [
             }, {
                 action: 'unpause',
                 datetime: '2021-03-30T19:23:12.554Z',
+            }, {
+                action: 'pause',
+                datetime: '2021-03-30T19:27:12.554Z',
             }],
             timezone: 'Europe/Madrid'
         },

@@ -28,15 +28,15 @@ export interface PauseAction {
  */
 
 export function getTimePaused(locale: Locale, start: string, end: string): number {
-    let totalPaused = -1;
-    return totalPaused;
+    return -1;
 }
 
 /**
  * Use the code below to run the function on the test data. See the readme for how to run this code
  */
 
-/* const testData = getTestData();
+const testData = getTestData();
 for (const td of testData) {
+    console.log('starting again');
     getTimePaused(td[0], td[1], td[2]);
-} */
+}
